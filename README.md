@@ -3,7 +3,7 @@
 This is a brainrotted encoder/decoder for the 67 Cipher.
 
 ## How to use
-1. Open `index.html` in your browser.
+1. Open https://legendile7.github.io/67cipher/ in your browser.
 2. Type text to encode or decode.
 3. Click the buttons.
 
