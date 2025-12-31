@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+    background-color: #ff00ff;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://www.thenews.com.pk/assets/uploads/updates/2025-09-01/1340580_7982010_fnl_updates.jpg'), linear-gradient(45deg, rgba(255, 0, 0, 0.2), rgba(0, 255, 0, 0.2), rgba(0, 0, 255, 0.2));
+    background-blend-mode: overlay;
+    background-size: cover;
+    filter: contrast(150%) brightness(80%);
+    animation: bg-pulse 5s infinite alternate;
+}
+
+@keyframes bg-pulse {
+    0% { filter: hue-rotate(0deg) contrast(150%); }
+    100% { filter: hue-rotate(360deg) contrast(200%); }
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 5px solid #00ff00;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px #ff00ff;
+    text-align: center;
+}
+
+h1.glitch {
+    font-size: 4rem;
+    color: #ffff00;
+    text-shadow: 3px 3px #ff0000;
+    margin-bottom: 0;
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #00ffff;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.converter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+textarea {
+    width: 90%;
+    height: 150px;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 3px solid #ffff00;
+    background-color: #222;
+    color: #00ff00;
+    font-family: monospace;
+    border-radius: 10px;
+    resize: vertical;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-family: 'Comic Sans MS', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.1s;
+}
+
+button:first-child {
+    background-color: #00ff00;
+    color: #000;
+    box-shadow: 5px 5px 0px #005500;
+}
+
+button:last-child {
+    background-color: #ff00ff;
+    color: #fff;
+    box-shadow: 5px 5px 0px #550055;
+}
+
+button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.copy-btn {
+    background-color: #ffaa00 !important;
+    color: #000 !important;
+    box-shadow: 5px 5px 0px #aa5500 !important;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px 10px;
+        padding: 15px;
+        width: auto;
+    }
+
+    h1.glitch {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+
